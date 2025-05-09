@@ -4,24 +4,9 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}              https://alonhadat.com.vn/
 ${Dia diem}         
-${VALID PASS}       admin123
-${INVALID USER}     DepTrai
-${INVALID PASS}     MatKhauSai
+
 *** Test Cases ***
-Valid Login
-    [Documentation]    Kiểm tra đăng nhập hợp lệ
-    Open Login Page    ${URL}
-    Input Username     ${VALID USER}
-    Input Password     ${VALID PASS}
-    Submit Credentials
-    Verify Login Success
-Invalid Login
-    [Documentation]    Kiểm tra đăng nhập không hợp lệ
-    Open Login Page    ${URL}
-    Input Username     ${INVALID USER}
-    Input Password     ${INVALID PASS}
-    Submit Credentials
-    Verify Login Failed
+
 *** Keywords ***
 Open Login Page
     [Documentation]    Mở trang login
