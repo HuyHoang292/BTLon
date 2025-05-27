@@ -15,19 +15,18 @@ Dự án này sử dụng **Robot Framework** kết hợp **Python** để tự 
 ## 🗂️ Cấu trúc thư mục
 
 BTLon/
-├── btl.robot              # Test suite chính
-├── LayDuLieuWebBatDongSan.py  # Script Python lấy dữ liệu từ web
-├── requirements.txt       # Thư viện cần cài cho Python
-├── README.md              # Hướng dẫn sử dụng
-"""
+btl.robot              # Test suite chính |
+LayDuLieuWebBatDongSan.py  # Script Python lấy dữ liệu từ web |
+ requirements.txt       # Thư viện cần cài cho Python |
+README.md              # Hướng dẫn sử dụng |
+"Tất cả các file đều nằm chung trong folder BTLon"
 
 
 
 ## ▶️ Cách chạy
 
-### 1. Cài đặt môi trường
-
 ```bash
+1. Cài đặt môi trường
 pip install -r requirements.txt
 Cài thêm Robot Framework và Selenium:
 
@@ -35,6 +34,7 @@ pip install robotframework
 pip install robotframework-seleniumlibrary
 Lưu ý: Cài ChromeDriver phù hợp với phiên bản Chrome và đặt nó trong PATH.
 
+2. Chạy test
 robot btl.robot
 Sau khi chạy xong:
 
@@ -62,7 +62,7 @@ Diện tích
 
 Giá
 
-📎 Ghi chú
+3. Ghi chú
 Script Python đã được xử lý encoding UTF-8 để tránh lỗi Unicode trên Windows.
 
 Sử dụng sys.stdout = io.TextIOWrapper(...) giúp in tiếng Việt không bị lỗi UnicodeEncodeError.
