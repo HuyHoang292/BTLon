@@ -15,10 +15,12 @@ Dự án này sử dụng **Robot Framework** kết hợp **Python** để tự 
 ## 🗂️ Cấu trúc thư mục
 
 BTLon/
-├── btl.robot # Test suite chính
-├── LayDuLieuWebBatDongSan.py # Script Python lấy dữ liệu từ web
-├── requirements.txt # Thư viện cần cài cho Python
-├── README.md # Hướng dẫn sử dụng
+├── btl.robot              # Test suite chính
+├── LayDuLieuWebBatDongSan.py  # Script Python lấy dữ liệu từ web
+├── requirements.txt       # Thư viện cần cài cho Python
+├── README.md              # Hướng dẫn sử dụng
+"""
+
 
 
 ## ▶️ Cách chạy
