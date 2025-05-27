@@ -29,17 +29,10 @@ BTLon/
 pip install -r requirements.txt
 Cài thêm Robot Framework và Selenium:
 
-bash
-Sao chép
-Chỉnh sửa
 pip install robotframework
 pip install robotframework-seleniumlibrary
 Lưu ý: Cài ChromeDriver phù hợp với phiên bản Chrome và đặt nó trong PATH.
 
-2. Chạy test
-bash
-Sao chép
-Chỉnh sửa
 robot btl.robot
 Sau khi chạy xong:
 
@@ -47,16 +40,14 @@ File Excel ket_qua_bds.xlsx sẽ được tạo nếu tìm thấy dữ liệu.
 
 File log và báo cáo HTML sẽ nằm trong thư mục results.
 
-✏️ Tùy chỉnh tìm kiếm
+* Tùy chỉnh tìm kiếm
 Trong file btl.robot, bạn có thể thay đổi các biến:
 
-robot
-Sao chép
-Chỉnh sửa
 ${Dia diem}         Hà Nội
 ${Loai giao dich}   cho-thue
 ${Loai BDS}         van-phong
-📝 Kết quả
+
+* Kết quả
 Kết quả được xuất ra file ket_qua_bds.xlsx gồm các cột:
 
 Tiêu đề
