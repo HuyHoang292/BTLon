@@ -1,10 +1,12 @@
-
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
 import sys
+import io
 
-url = "https://alonhadat.com.vn/nha-dat/cho-thue/van-phong/1/ha-noi.html"
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+url = sys.argv[1]
 print(f"Đang lấy dữ liệu từ: {url}")
 
 response = requests.get(url)
@@ -25,13 +27,13 @@ if response.status_code == 200:
         area = areas[i].get_text(strip=True) if i < len(areas) else ''
         price = prices[i].get_text(strip=True) if i < len(prices) else 'N/A'
         
-        # Thêm vào danh sách dữ liệu
         data.append([title, desc, address, area, price])
 
-    # Xuất ra file Excel
     if data:
         df = pd.DataFrame(data, columns=["Tiêu đề", "Mô tả", "Địa chỉ", "Diện tích", "Giá"])
         df.to_excel("ket_qua_bds.xlsx", index=False)
         print("Đã xuất dữ liệu ra file ket_qua_bds.xlsx")
     else:
         print("Không tìm thấy dữ liệu phù hợp.")
+else:
+    print(f"Lỗi khi truy cập URL: {response.status_code}")

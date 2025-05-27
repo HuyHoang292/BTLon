@@ -1,0 +1,8 @@
+# Thư viện Python
+beautifulsoup4==4.12.2
+pandas==2.2.2
+requests==2.31.0
+
+# Robot Framework & thư viện liên quan
+robotframework==6.1.1
+robotframework-seleniumlibrary==6.2.0

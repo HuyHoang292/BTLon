@@ -31,8 +31,7 @@ Mo Trang Web Bat Dong San
     [Arguments]    ${URL}
     Open Browser    ${URL}    chrome
     Maximize Browser Window
-    Wait Until Element Is Visible    css:.location    timeout=10
-
+    Wait Until Element Is Visible    css:.location    timeout=20
 Input Location
     [Documentation]    Nhập địa điểm cần tìm
     [Arguments]    ${Dia diem}
@@ -59,5 +58,6 @@ Search Credentials
 
 Chay file python
     [Arguments]    ${url}
-    Log To Console    URL sau khi tìm kiếm: ${url}
-    Run Process    python3    ${PythonFile}    ${url}
+    Log To Console    === Bắt đầu chạy Python script ===
+    Run Process    python    ${PythonFile}    ${url}
+    Log To Console    === Đã gọi xong Python script ===
